@@ -4,6 +4,7 @@
 
 @section('content_header')
     <h1>Lista de productos</h1>
+     {{ Breadcrumbs::render('productos') }}
 @stop
 
 @section('content')
@@ -27,7 +28,9 @@
                     <td>{{ $producto->precio }}</td>
                     <td>{{ $producto->existencia }}</td>
                     <td>
-                        {{-- Aquí puedes agregar botones para editar o eliminar --}}
+                        
+                        <a href="{{ route('productos.editar', $producto->id) }}" class="btn btn-primary">Editar</a>
+
                         <form action="{{ route('productos.eliminar', $producto->id) }}" method="POST" style="display:inline;">
                             @csrf
                             @method('DELETE')

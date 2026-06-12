@@ -312,9 +312,27 @@ return [
                 [
                     'text' => 'Lista',
                     'route' => 'productos',
+                    
                 ],
+               
             ],
         ],
+            [
+            'text' => 'Almacenes',
+            'icon' => 'fas fa-fw fa-share',
+            'submenu' => [
+                [
+                    'text' => 'Nuevo',
+                    'route' => 'almacenes.nuevo',
+                ],
+                [
+                    'text' => 'Lista',
+                    'route' => 'almacenes.index',
+                    
+                ],
+               
+            ],
+        ]
     ],
     /*
     |--------------------------------------------------------------------------
